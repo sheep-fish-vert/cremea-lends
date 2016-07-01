@@ -1,0 +1,77 @@
+// lend-1
+.global-wrapper{width: 100%;height: 100%;display: flex;height: 100vh;overflow: hidden;}
+.header-1{position: absolute;top: 0;left: 0;width: 100%;background-color: rgba(77, 108, 130, 0.7);
+    .mbox{height: 100px;display: flex;align-items: center;justify-content: space-between;max-width: 960px;
+        &:after{display: none;}
+
+        .header-title{
+            h1{margin: 0;color: white;text-transform: uppercase;font-weight: 500;font-size: 25px;}
+        }
+        .header-tel{display: flex;flex-direction: column;
+            a{display: flex;align-items: center;text-decoration: none;font-size: 26px;color: white;font-weight: 400;margin-bottom: 8px;
+                span{margin-left: 5px;}
+            }
+            button{width: 250px;height: 40px;background-color: #ee5724;display: flex;align-items: center;justify-content: center;color: white;font-weight: bold;text-transform: uppercase;font-size: 22px;border:none;transition:all ease .2s;
+                &:hover{background-color: #fc6735;}
+            }
+        }
+
+    }
+}
+.lend-1{background:transparent url('../images/lend-1.jpg') center top no-repeat;background-size: cover;width: 100%;display: flex;align-items: flex-end;justify-content: center;
+    .mbox{display: flex;align-items: flex-end;justify-content: space-between;margin-bottom: 6%;
+        &:after{display: none;}
+    }
+    .row-bottom{display: flex;justify-content: space-between;align-items: flex-end;width: 100%;
+        .item{display: flex;
+            &.left{height: 167px;flex-shrink: 0;
+                .item-to{background-color: rgba(49,162,225,.7);padding: 18px 10px 18px 24px;font-weight: bold;color: white;font-size: 22px;display: flex;justify-content: space-around;flex-direction: column;
+                    p{margin:0;text-transform: uppercase;    font-weight: 500;}
+                    .timeTo{display: flex;height: auto;
+                        figure{margin:0;display: block;max-width: 84px !important;margin-right: 11px;
+                            &:first-child{
+                                .first + div{margin-right: 0 !important;}
+                                .first + div + figcaption{padding-right: 0 !important;}
+                            }
+                        }
+                        &>span{display: none;}
+                        div{background:#044f7a;color: white;border:none;margin-right: 3px;border-radius: 5px;font-weight: bold;width: 39px !important;height: 60px !important;}
+                        figcaption{font-size: 12px !important;color: white;font-family: "Lato";text-transform: uppercase;margin-top: 5px;margin-bottom: -5px;}
+                        ul{padding-left: 0px;margin-top: 3px;}
+                    }
+                }
+                .item-text{display: flex;align-items: center;flex-direction: column;background-color: rgba(67, 80, 97, 0.7);padding: 13px 24px;justify-content: space-between;
+                    p{text-transform: uppercase;color: white;margin:0;line-height: 1.1;}
+                    button{width: 178px;height: 40px;background-color: #ee5724;display: flex;align-items: center;justify-content: center;color: white;font-weight: bold;text-transform: uppercase;font-size: 22px;border:none;transition:all ease .2s;
+                        &:hover{background-color: #fc6735;}
+                    }
+                }
+            }
+            &.right{display: flex;min-height: 250px;width: 100%;max-width: 623px;background-color: rgba(237, 237, 237, 0.8);
+                .errorText{display: none !important;}
+                form{display: flex;flex-direction: column;padding: 30px 28px 18px;
+                    h2,.h2{margin:0;font-size: 30px;color: #044f7a;font-weight: bold;}
+                    .form_row{display: flex;align-items: center;justify-content: space-between;flex-wrap: wrap;
+                        &.submit{
+                            button{height: 40px;width: 100%;border:none;background-color: #40a6de;color: white;font-weight: bold;text-transform: uppercase;font-size: 22px;transition:all ease .2s;
+                                &:hover{background-color: #53bbf4;}
+                            }
+                        }
+                    }
+                    .lend-1-form-title{margin-bottom: 20px;}
+                    .form_input{width: 100%;max-width: 273px;margin-bottom: 16px;
+                        input{width: 100%;border:1px solid #acaaa9;height: 40px;font-size: 18px;padding: 8px;
+                            &.error{border-color: red;}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.call_success{padding: 29px 20px;text-align: center;
+    .call-title{font-size: 35px;font-weight: bold;margin-bottom: 15px;}
+    .call-subtitle{font-size: 26px;}
+}

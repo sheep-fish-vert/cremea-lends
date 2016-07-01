@@ -146,20 +146,35 @@ function headeButer(menuMobile,toggleMenu){
     }
 }
 
-/* expresion for numbers with spaces */
 
-    function numberWithSpaces(x) {
-        var parts = x.toString().split(".");
-        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-        return parts.join(".");
+function changeViewport(){
+
+    $(window).resize(function(){
+
+        whatViewport();
+
+    });
+
+    function whatViewport(){
+
+        var windowWidth = screen.width;
+        var viewport = $("meta[name=viewport]");
+        viewport.attr('content', 'width=device-width');
+        if(windowWidth<=640){
+            viewport.attr('content', 'width=640');
+        }
+
     }
 
-/* /expresion for numbers with spaces */
+}
+
+
+
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
     //oneHeightItems();
-    $('.footer_placeholder').height($('.footer').outerHeight());
+    //$('.footer_placeholder').height($('.footer').outerHeight());
 
     //goTo();
     //animationBlock($('.setion-animate'));
@@ -167,5 +182,11 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 
-    $('.footer_placeholder').height($('.footer').outerHeight());
+    //$('.footer_placeholder').height($('.footer').outerHeight());
+});
+
+$(window).load(function(){
+
+    changeViewport();
+
 });

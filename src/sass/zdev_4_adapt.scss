@@ -14,7 +14,12 @@
 
 }
 @media screen and (max-width: 992px){
-
+    .lend-1 .row-bottom{flex-direction: column;justify-content: center;
+    align-items: center;}
+    .lend-1 .row-bottom .item.left{flex-shrink: 1;flex-direction: column-reverse;height: auto;margin-bottom: 20px;}
+    .lend-1 .row-bottom .item.left .item-text{margin-bottom: 20px;}
+    .lend-1 .row-bottom .item.left .item-text p{margin-bottom: 20px;}
+    .lend-1 .row-bottom .item.left .item-text p br{display: none;}
 }
 @media screen and (max-width: 767px){
 
