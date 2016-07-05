@@ -168,8 +168,9 @@ function fancyboxForm(){
 
 $(document).ready(function(){
 
-   validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.lend-1-form form', {submitFunction:validationCall});
+   validate('.lend-2-form form', {submitFunction:validationCall});
+   validate('.lend-3-form form', {submitFunction:validationCall});
    Maskedinput();
    fancyboxForm();
 

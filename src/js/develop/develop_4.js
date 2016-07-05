@@ -16,8 +16,26 @@ function lend1Timer(){
 }
 
 
+function focusSubmit(){
+    $('.focus-tel').click(function(event) {
+        $('.give-me-focus').focus();
+    });
+}
+
+function lend1Timer2(){
+     $('#timeto-2').timeTo({
+        timeTo: new Date(new Date(lend2_year,lend2_mounts,lend2_day)),
+        displayDays: 2,
+        lang:'ru',
+        displayCaptions: true,
+        fontFamily:'EagleSans',
+        fontSize:67
+     });
+}
 $(document).ready(function(){
     lend1Timer();
+    focusSubmit();
+    lend1Timer2();
 });
 
 $(window).load(function(){

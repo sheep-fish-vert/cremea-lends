@@ -101,5 +101,14 @@ input, textarea{
 @include font-face('Lato', 'Lato-Regular', 400);
 @include font-face('Lato', 'Lato-Semibold', 600);
 
+@include font-face('EagleSans', 'EagleSans-Regular');
+@include font-face('EagleSans', 'EagleSans-Bold',700);
+
+
+@include font-face('UniSans', 'UniSansBold',700);
+@include font-face('UniSans', 'UniSansLight',300);
+@include font-face('UniSans', 'UniSansRegular',400);
+@include font-face('UniSans', 'UniSansSemiBold',600);
+
 
 /*/fonts*/

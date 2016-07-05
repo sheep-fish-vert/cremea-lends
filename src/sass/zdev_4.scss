@@ -12,6 +12,7 @@
                 span{margin-left: 5px;}
             }
             button{width: 250px;height: 40px;background-color: #ee5724;display: flex;align-items: center;justify-content: center;color: white;font-weight: bold;text-transform: uppercase;font-size: 22px;border:none;transition:all ease .2s;
+                span{display: inline-block;width: 100%;text-align: center;}
                 &:hover{background-color: #fc6735;}
             }
         }
@@ -43,6 +44,7 @@
                 .item-text{display: flex;align-items: center;flex-direction: column;background-color: rgba(67, 80, 97, 0.7);padding: 13px 24px;justify-content: space-between;
                     p{text-transform: uppercase;color: white;margin:0;line-height: 1.1;}
                     button{width: 178px;height: 40px;background-color: #ee5724;display: flex;align-items: center;justify-content: center;color: white;font-weight: bold;text-transform: uppercase;font-size: 22px;border:none;transition:all ease .2s;
+                        span{display: inline-block;width: 100%;text-align: center;}
                         &:hover{background-color: #fc6735;}
                     }
                 }
@@ -51,7 +53,7 @@
                 .errorText{display: none !important;}
                 form{display: flex;flex-direction: column;padding: 30px 28px 18px;
                     h2,.h2{margin:0;font-size: 30px;color: #044f7a;font-weight: bold;}
-                    .form_row{display: flex;align-items: center;justify-content: space-between;flex-wrap: wrap;
+                    .form_row{display: flex;align-items: center;justify-content: space-between;
                         &.submit{
                             button{height: 40px;width: 100%;border:none;background-color: #40a6de;color: white;font-weight: bold;text-transform: uppercase;font-size: 22px;transition:all ease .2s;
                                 &:hover{background-color: #53bbf4;}
@@ -61,6 +63,7 @@
                     .lend-1-form-title{margin-bottom: 20px;}
                     .form_input{width: 100%;max-width: 273px;margin-bottom: 16px;
                         input{width: 100%;border:1px solid #acaaa9;height: 40px;font-size: 18px;padding: 8px;
+                            &:focus{border-color: #ffa383;}
                             &.error{border-color: red;}
                         }
 
@@ -74,4 +77,143 @@
 .call_success{padding: 29px 20px;text-align: center;
     .call-title{font-size: 35px;font-weight: bold;margin-bottom: 15px;}
     .call-subtitle{font-size: 26px;}
+}
+@supports (-webkit-background-clip: text) {
+    span.grey-text, .lend-2 .lend-2-timer #timeto-2.timeTo.timeTo-white div ul li{
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 47%,rgba(178,178,178,1) 55%) !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;
+    }
+}
+.header-2{position: absolute;top: 0;left: 0;width: 100%;font-family: 'EagleSans';z-index: 1000;
+    .mbox{display: flex;max-width: 991px;
+        .header-tel{min-height: 88px;position: relative;width: 404px;text-align: left;padding-top: 10px;
+            &:after{background:transparent url('../images/tel-2-left.png') right top no-repeat;width: 462px;position: absolute;right: 0;top: 0;content: '';height: 88px;}
+            span{position: relative;}
+
+            a{position: relative;z-index: 2;color: #ffffff;font-size: 40px;text-decoration: none;}
+            p{margin:0;position: relative;z-index: 2;color: rgba(255,255,255, .5);font-size: 15px;text-transform: uppercase;margin-top: 6px;}
+        }
+        .header-button{position: relative;display: flex;align-items: center;justify-content: center;text-align: center;
+            a{position: relative;z-index: 2;text-transform: uppercase;color: white;text-decoration: none;font-size: 15px;line-height: 1.2;width: 142px;height: 53px;padding-right: 15px;
+                span{}
+            }
+            &:after{background:transparent url('../images/tel-2.png') left top no-repeat;width: 100%;position: absolute;left: 0;top: 0;content: '';height: 100%;transition:all ease .2s;}
+            &:hover{
+                &:after{background:transparent url('../images/tel-2-active.png') left top no-repeat;}
+            }
+        }
+        &:after{display: none;}
+    }
+}
+
+.lend-2{background:transparent url('../images/lend-2.jpg') center top no-repeat;background-size: cover;width: 100%;display: flex;align-items: flex-end;font-family: 'EagleSans';
+    .mbox{max-width: 991px;display: flex;justify-content: flex-end;margin-bottom: 40px;}
+    .lend-2-wrap{max-width: 480px;width: 100%;display: flex;flex-wrap: wrap;flex-direction: column;justify-content: flex-end;align-items: flex-end;position: relative;z-index: 3;}
+    .lend-2-circle{display: flex;justify-content: flex-end;}
+    .lend-2-text{max-width: 385px;width: 100%;font-size: 14px;color: rgb(255, 255, 255);line-height: 1.143;}
+    .lend-2-form{width: 100%;max-width: 385px;
+        form{}
+        .errorText{display: none !important;}
+        .form_input{width: 100%;margin-bottom: 17px;
+            &:nth-child(2){
+                input{background:#ffffff url('../images/lend-2-2.png') 12px center no-repeat;}
+            }
+            &:nth-child(3){
+                input{background:#ffffff url('../images/lend-2-3.png') 12px center no-repeat;}
+            }
+        }
+        input{width: 100%;height: 47px;font-size: 18px;padding: 8px;border:none;padding-left: 50px;position: relative;background:#ffffff url('../images/lend-2-1.png') 12px center no-repeat;border:1px solid transparent;
+            //&:after{background:transparent url('../images/lend-2-1.png') left top no-repeat;content: '';}
+            &:focus{border-color: #ffa383;}
+            &.error{border-color: red;}
+
+            &::-webkit-input-placeholder {color:#c0c7c0;}
+            &:-moz-placeholder {color:#c0c7c0;opacity:1;}
+            &::-moz-placeholder {color:#c0c7c0;opacity:1;}
+            &:-ms-input-placeholder {color:#c0c7c0;}
+
+
+        }
+        .contact-submit{width: 100%;background-color: #b55802;text-align: center;text-transform: uppercase;color: white;font-size: 19px;border:none;height: 69px;padding: 0;position: relative;transition:all ease .2s;
+            &:after{background-color: #8b4708;width: 100%;position: absolute;bottom: 0;left: 0;height: 4px;content: '';transition:all ease .2s;}
+
+            &:hover{background-color: #d26e11;
+                &:after{background-color: #8b4708;}
+            }
+        }
+    }
+    .lend-2-timer{width: 100%;text-align: left;padding-top: 50px;
+        &>span{text-transform: uppercase;font-size: 26px;}
+
+        #timeto-2{margin-left: -90px;margin-left: -20px;margin-bottom: 43px;height: auto !important;padding-top: 25px;
+            &>span{display: none;}
+            figure{max-width: 106px !important;width: 133px !important;margin-right: 19px;position: relative;
+
+                &:after{content: ':';position: absolute;color: white;top: -3px;right: -13px;color: white;font-size: 38px;}
+                &:before{width: 112px;height: 94px;background:transparent url('../images/timer-2-1.png') center center no-repeat;content: '';position: absolute;top: 33%;left: 50%;transform: translate(-50%, -50%);}
+                &:last-child{
+                    &:after{display: none;}
+                }
+                .first + div{margin-left: -8px;}
+                &:nth-child(2){
+                    &:before{background:transparent url('../images/timer-2-2.png') center center no-repeat;}
+                }
+                &:nth-child(3){
+                    &:before{background:transparent url('../images/timer-2-3.png') center center no-repeat;}
+                }
+                &:nth-child(4){
+                    &:before{background:transparent url('../images/timer-2-4.png') center center no-repeat;}
+                }
+            }
+            figure:last-child{margin-right: 0;}
+            &.timeTo.timeTo-white div{width: 53px !important;margin-right: 0 !important;background:none;color: white;border:none;font-weight: 400 !important;}
+            figcaption{padding-right: 0 !important;font-size: 14px !important;color: rgba(255,255,255,.1);}
+        }
+    }
+    .lend-2-button{position: relative;
+        &:hover{
+            img{
+            &.active{opacity: 1;visibility: visible;}
+        }
+        }
+        img{transition:all ease .2s;
+            &.active{position: absolute;top: 0;right: 0;opacity: 0;visibility: hidden;}
+        }
+    }
+    .lend-2-people{position: absolute;left: -15%;bottom: -40px;z-index: 2;}
+}
+
+
+.header-3{position: absolute;top: 10px;left: 0;width: 100%;font-family: 'UniSans';z-index: 1000;text-align: center;
+    .header-title h1{text-transform: uppercase;font-weight: 400;line-height: 1.125;font-size: 44px;color: #271113;margin:0;line-height: 1.3;letter-spacing: 3px;
+        span{color: white;}
+    }
+}
+.lend-3{background:transparent url('../images/lend-3.jpg') center top no-repeat;background-size: cover;width: 100%;display: flex;font-family: 'UniSans';
+    .mbox{max-width: 1024px;display: flex;justify-content: center;align-items: flex-end;}
+    .lend-3-form{position: absolute;left: 50%;transform: translateX(-50%);bottom: 170px;max-width: 740px;width: 100%;
+        form{display: flex;flex-wrap: wrap;flex-direction: column;justify-content: center;}
+        .errorText{display: none !important;}
+        .form_row{max-width: 637px;width: 100%;height: 70px;display: flex;padding: 0 20px;align-items: center;justify-content: space-between;margin:0 auto;border-radius: 8px;background-color: rgba(7, 138, 167, .8);border-bottom-right-radius: 0;border-bottom-left-radius: 0px;
+            .form_input:last-child input{background:rgba(255,255,255, .27)  url('../images/lend-3-2.png') 12px center no-repeat;}
+            input{width: 275px;height: 40px;border-radius: 8px;background:rgba(255,255,255, .27) url('../images/lend-3-1.png') 12px center no-repeat;padding-left: 40px;border:1px solid transparent;color: white;font-size: 17px;
+                &:focus{border-color: #ffb931;}
+                &.error{border-color: red;}
+
+                &::-webkit-input-placeholder {color:#fff;}
+                &:-moz-placeholder {color:#fff;opacity:1;}
+                &::-moz-placeholder {color:#fff;opacity:1;}
+                &:-ms-input-placeholder {color:#fff;}
+            }
+        }
+        .submit{display: flex;justify-content: center;
+            button{border:none;background:transparent url('../images/lend-3-button.png') center center;border-bottom: 4px solid #a56d00;border-radius: 5px;height: 160px;color: #442e1f;width: 100%;
+                &:hover{background:transparent url('../images/lend-3-button-active.png') center center;}
+                p{margin: 0;}
+                b{font-size: 42px;font-weight: bold;display: block;text-transform: uppercase;}
+                span{font-size: 29px;font-weight: 300;color: rgba(68, 46, 31, 0.49);letter-spacing: 0.3px;}
+            }
+        }
+    }
 }
